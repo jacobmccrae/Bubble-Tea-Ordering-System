@@ -1,6 +1,3 @@
-// Lab 9
-// Jacob McCrae
-// 100199022
 // 03.21.2016
 
 /*jslint white: true */
