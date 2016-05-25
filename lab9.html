@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>Bubble Tea Ordering System</title>
+    <meta charset="utf-8">
+    <script src="lab9.js" defer></script>
+    <style>
+        td{
+            text-align: center;
+            width: 5%;
+        }
+    </style>
+</head>
+<body onload="setup()">
+    <div id="wrapper">
+        <h1>Bubble Tea Order</h1>
+        <div id="orderOptionsWrapper">
+            <div id="teaOptions">
+                <label>Tea</label>
+                <select id="tea" name="tea" onchange="drawOrder()"></select>
+            </div>
+            <div id="toppingOptions" style="margin-top: 10px">
+                <label>Toppings</label>
+                <select id="toppings" name="toppings"></select>
+                <div id="toppingButtons">
+                    <input id="add" type="button" value="Add Topping" onclick="addTopping()">
+                    <input id="remove" type="button" value="Remove Topping" onclick="removeTopping()">
+                </div>
+            </div>
+            <div id="toppingPicked" style="margin-top: 5px">
+                <label>Current Toppings</label>
+                <ul id="currentToppings"></ul>
+            </div>
+            <div id="milkOptions">
+                <label>Milk</label>
+                <select id="milk" name="milk" onchange="drawOrder()"></select>
+            </div>
+        </div>
+        <div id="canvasWrapper" style="margin-top: 20px">
+            <canvas id="teaCanvas" width="200" height="200"></canvas>
+        </div>
+        <div id="order">
+            <h1>Your Order</h1>
+            <div id="orderButtons">
+                <input type="button" onclick="addDrink()" value="Add Drink" style="margin-bottom: 5px;">
+                <input type="button" onclick="removeDrink()" value="Remove Drink">
+                <input type="button" onclick="resetDrinks()" value="Reset">
+            </div>
+            <table id="drinks"></table>
+        </div>
+    </div>
+</body>
